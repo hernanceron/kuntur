@@ -1,0 +1,77 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+apply plugin: 'java'
+
+targetCompatibility = 1.8
+sourceCompatibility = 1.8
+version = '1.0-SNAPSHOT'
+group = 'com.everis.kigen'
+
+repositories {
+    mavenCentral()
+}
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'maven'
+
+    uploadArchives {
+        repositories {
+            mavenDeployer {
+                repository(url: "http://localhost:8081/nexus/content/repositories/snapshots/") {
+                    authentication(userName: "admin", password: "admin123")
+                }
+            }
+        }
+    }
+}
+
+def dependencyRegex = '.*(bff|business|support)-dependencies'
+def parentRegex = '.*(bff|business|support)parent'
+
+//Common dependency for dependency projects
+configure(subprojects.findAll {it.name.matches(dependencyRegex)}) {
+    dependencies {
+        compile project(':common-dependencies')
+    }
+}
+
+//Core dependency for parent projects
+configure(subprojects.findAll {it.name.matches(parentRegex)}) {
+
+    dependencies {
+        compile project(':core')
+    }
+
+    jar {
+        manifest {
+            attributes 'Implementation-Title': 'Jar created for common dependencies',
+                    'Implementation-Version': '1.0'
+        }
+
+        from {
+            configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+        }
+    }
+}
+
+project(':bffparent') {
+    dependencies {
+        compile project(':bff-dependencies')
+    }
+}
+
+project(':supportparent') {
+    dependencies {
+        compile project(':support-dependencies')
+    }
+}
+
+project(':businessparent') {
+    dependencies {
+        compile project(':business-dependencies')
+    }
+}
