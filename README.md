@@ -2,8 +2,7 @@
 
 ### Definition
 Kigen is a framework developed by Everis with the objective of demystifying the process
-of building microservices following the best practices and using cutting edge
-technologies.
+of building microservices following the best practices and focusing in modularity.
 
 ### Structure
 Our component is a Gradle project that contains many sub-projects. In order to understand
@@ -33,7 +32,7 @@ microservices. The technical support term is related with the connection to lega
 components that don't use the same communication protocol used by the microservices added
 in our platform.
 
-### Components that support the architecture
+### Components
 To get our objective of demystifying the building of microservices, we are using/developing 
 many tools and even another frameworks.
 
@@ -47,6 +46,25 @@ intentions on re-inventing the wheel. For this reason we are supporting our fram
 Spring framework and Vertex(In progress). For another features we are using pre-made
 frameworks too such as Hibernate, Cucumber, Audit4J, etc. 
 
-- ** 
+- **Validator frameworks**: We have two types of validations on our framework: integrity and business. 
+Integrity validations are applied on the message entities to verify the validity of the message(This is 
+a requirement for the reactive manifesto). In the other hand, business validations are linked with 
+business rules to verify the business process.
+
+- **Dependencies by microservice type**: Every microservice type in Kigen has one set of dependencies
+provided by the framework in compilation time and runtime.
+
+
+### Modules
+
+Kuntur Framework contains several modules, each one with different and marked responsabilities
+
+### Requirements
+
+- Java 8 (any sub-version)
+
+### Installation
+
+ 
 
      

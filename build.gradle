@@ -21,8 +21,8 @@ subprojects {
     uploadArchives {
         repositories {
             mavenDeployer {
-                repository(url: "http://localhost:8081/nexus/content/repositories/snapshots/") {
-                    authentication(userName: "admin", password: "admin123")
+                repository(url: "http://localhost:8081/nexus/content/repositories/snapshots/") { //TODO support for dynamic URL
+                    authentication(userName: "admin", password: "admin123") //TODO Credentials have to be read from one external source
                 }
             }
         }
@@ -32,14 +32,18 @@ subprojects {
 def dependencyRegex = '.*(bff|business|support)-dependencies'
 def parentRegex = '.*(bff|business|support)parent'
 
-//Common dependency for dependency projects
+/**
+ * Configuration for the common dependencies
+ */
 configure(subprojects.findAll {it.name.matches(dependencyRegex)}) {
     dependencies {
         compile project(':common-dependencies')
     }
 }
 
-//Core dependency for parent projects
+/**
+ * Core dependency for parent projects
+ */
 configure(subprojects.findAll {it.name.matches(parentRegex)}) {
 
     dependencies {
