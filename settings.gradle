@@ -1,4 +1,4 @@
-rootProject.name = 'kigen-framework'
+rootProject.name = 'kuntur-framework'
 include 'bff-dependencies'
 include 'bffparent'
 include 'business-dependencies'

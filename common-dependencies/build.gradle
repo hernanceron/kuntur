@@ -13,7 +13,7 @@ apply plugin: 'eclipse'
 
 sourceCompatibility = 1.8
 version = '1.0-SNAPSHOT'
-group = 'com.everis.kigen'
+group = 'com.everis.kuntur'
 
 repositories { mavenCentral() }
 ext {

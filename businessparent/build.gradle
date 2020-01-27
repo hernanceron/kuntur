@@ -1,4 +1,4 @@
-group 'com.everis.kigen'
+group 'com.everis.kuntur'
 version '1.1-SNAPSHOT'
 
 apply plugin: 'java'

@@ -1,7 +1,7 @@
-## Kigen Framework
+## Kuntur Framework
 
 ### Definition
-Kigen is a framework developed by Everis with the objective of demystifying the process
+Kuntur is a framework developed by Everis with the objective of demystifying the process
 of building microservices following the best practices and focusing in modularity.
 
 ### Structure
@@ -51,7 +51,7 @@ Integrity validations are applied on the message entities to verify the validity
 a requirement for the reactive manifesto). In the other hand, business validations are linked with 
 business rules to verify the business process.
 
-- **Dependencies by microservice type**: Every microservice type in Kigen has one set of dependencies
+- **Dependencies by microservice type**: Every microservice type in Kuntur has one set of dependencies
 provided by the framework in compilation time and runtime.
 
 
