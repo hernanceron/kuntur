@@ -1,6 +1,6 @@
-package com.everis.kuntur.core.validation.integrity;
+package com.pacifico.kuntur.core.validation.integrity;
 
-import com.everis.kuntur.core.model.web.KunturHttpModel;
+import com.pacifico.kuntur.core.model.web.KunturHttpModel;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;

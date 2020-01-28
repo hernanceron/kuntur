@@ -1,6 +1,6 @@
-package com.everis.kuntur.core.model.web;
+package com.pacifico.kuntur.core.model.web;
 
-import com.everis.kuntur.core.validation.business.KunturBusinessValidation;
+import com.pacifico.kuntur.core.validation.business.KunturBusinessValidation;
 
 import java.util.List;
 

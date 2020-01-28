@@ -9,7 +9,7 @@ apply plugin: 'java'
 targetCompatibility = 1.8
 sourceCompatibility = 1.8
 version = '1.0-SNAPSHOT'
-group = 'com.everis.kuntur'
+group = 'com.pacifico.kuntur'
 
 repositories {
     mavenCentral()

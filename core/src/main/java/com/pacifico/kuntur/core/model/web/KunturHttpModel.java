@@ -1,6 +1,6 @@
-package com.everis.kuntur.core.model.web;
+package com.pacifico.kuntur.core.model.web;
 
-import com.everis.kuntur.core.exception.KunturHttpModelValidationException;
+import com.pacifico.kuntur.core.exception.KunturHttpModelValidationException;
 
 public abstract class KunturHttpModel<T> {
 

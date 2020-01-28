@@ -1,4 +1,4 @@
-package com.everis.kuntur.core.validation.business;
+package com.pacifico.kuntur.core.validation.business;
 
 import java.util.List;
 import java.util.Optional;

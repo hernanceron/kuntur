@@ -1,4 +1,4 @@
-package com.everis.kuntur.core.exception;
+package com.pacifico.kuntur.core.exception;
 
 public class KunturFrameworkException extends Exception {
 

@@ -1,4 +1,4 @@
-package com.everis.kuntur.core.model.domain;
+package com.pacifico.kuntur.core.model.domain;
 
 public class KunturInternalErrorModel {
     private String internalCode;

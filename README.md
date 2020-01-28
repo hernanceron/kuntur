@@ -61,7 +61,7 @@ Kuntur Framework contains several modules, each one with different and marked re
 
 ### Requirements
 
-- Java 8
+- Java 8 (any sub-version)
 
 ### Installation
 

@@ -1,4 +1,4 @@
-package com.everis.kuntur.core.util;
+package com.pacifico.kuntur.core.util;
 
 public class KunturUtilMessageManagement {
 }
